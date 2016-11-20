@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace MantenimientoEmpleados
 {
@@ -55,6 +57,29 @@ namespace MantenimientoEmpleados
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
+            SqlConnection conexion = new SqlConnection(con);
+            try
+            {
+                conexion.Open();
+
+                lblConexion.Text = "Conexion exitosa!";
+
+            }
+            catch (Exception x)
+            {
+
+                label1.Text = x.Message.ToString();
+            }
+            finally
+            {
+                conexion.Close();
+            }
         }
     }
 }
