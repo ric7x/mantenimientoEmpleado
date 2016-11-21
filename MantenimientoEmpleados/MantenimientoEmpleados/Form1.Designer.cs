@@ -270,6 +270,8 @@
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(146, 20);
             this.dtFechaNacimiento.TabIndex = 28;
+            this.dtFechaNacimiento.Value = new System.DateTime(2016, 11, 21, 0, 0, 0, 0);
+            this.dtFechaNacimiento.ValueChanged += new System.EventHandler(this.dtFechaNacimiento_ValueChanged);
             // 
             // dtFechaIngreso
             // 
@@ -277,6 +279,7 @@
             this.dtFechaIngreso.Name = "dtFechaIngreso";
             this.dtFechaIngreso.Size = new System.Drawing.Size(146, 20);
             this.dtFechaIngreso.TabIndex = 29;
+            this.dtFechaIngreso.Value = new System.DateTime(2016, 11, 21, 0, 0, 0, 0);
             // 
             // cmbSexo
             // 

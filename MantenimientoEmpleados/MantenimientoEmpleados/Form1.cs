@@ -61,6 +61,8 @@ namespace MantenimientoEmpleados
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DateTime fechaN = dtFechaNacimiento.Value;
+            DateTime fechaI = dtFechaIngreso.Value;
 
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
@@ -84,9 +86,12 @@ namespace MantenimientoEmpleados
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            
+            
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
-            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo ,fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "'," + txtSalario.Text + ",'" + txtEstatus.Text + "') ";
+            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo ,fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
+            
 
             try
             {
@@ -119,5 +124,10 @@ namespace MantenimientoEmpleados
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
                     }
+
+        private void dtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
