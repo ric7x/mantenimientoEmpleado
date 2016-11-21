@@ -81,5 +81,43 @@ namespace MantenimientoEmpleados
                 conexion.Close();
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
+            SqlConnection conexion = new SqlConnection(con);
+            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo ,fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "'," + txtSalario.Text + ",'" + txtEstatus.Text + "') ";
+
+            try
+            {
+                conexion.Open();
+
+                label1.Text = "Conexion exitosa!";
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                int res = cmd.ExecuteNonQuery();
+                if (res >= 1)
+                {
+                    MessageBox.Show("Cliente Registrado!!!");
+                }
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.Message.ToString());
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+                    }
     }
 }
