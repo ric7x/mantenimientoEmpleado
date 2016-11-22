@@ -38,12 +38,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1138, 489);
+            this.dataGridView1.Size = new System.Drawing.Size(1072, 489);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(970, 507);
+            this.button1.Location = new System.Drawing.Point(904, 507);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 62);
             this.button1.TabIndex = 1;
@@ -55,11 +55,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 576);
+            this.ClientSize = new System.Drawing.Size(1104, 576);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmListaEmpleados";
-            this.Text = "frmListaEmpleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista Empleados..";
             this.Load += new System.EventHandler(this.frmListaEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
