@@ -54,9 +54,11 @@
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.dtFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -238,7 +240,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(362, 604);
+            this.button1.Location = new System.Drawing.Point(359, 521);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 25;
@@ -249,7 +251,7 @@
             // lblConexion
             // 
             this.lblConexion.AutoSize = true;
-            this.lblConexion.Location = new System.Drawing.Point(256, 609);
+            this.lblConexion.Location = new System.Drawing.Point(253, 526);
             this.lblConexion.Name = "lblConexion";
             this.lblConexion.Size = new System.Drawing.Size(0, 13);
             this.lblConexion.TabIndex = 26;
@@ -292,11 +294,20 @@
             this.cmbSexo.Size = new System.Drawing.Size(146, 21);
             this.cmbSexo.TabIndex = 30;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(505, 57);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(444, 482);
+            this.dataGridView1.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 639);
+            this.ClientSize = new System.Drawing.Size(973, 558);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.dtFechaIngreso);
             this.Controls.Add(this.dtFechaNacimiento);
@@ -325,6 +336,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,6 +370,7 @@
         private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
         private System.Windows.Forms.DateTimePicker dtFechaIngreso;
         private System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

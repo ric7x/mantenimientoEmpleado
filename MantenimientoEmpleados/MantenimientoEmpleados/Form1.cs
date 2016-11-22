@@ -21,7 +21,34 @@ namespace MantenimientoEmpleados
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargarEmpleados();
+            /* string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
+            SqlConnection conexion = new SqlConnection(con);
+            //string sql = " INSERT INTO empleado (nombre ,apellido ,sexo ,fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
 
+
+            try
+            {
+                conexion.Open();
+
+                label1.Text = "Conexion exitosa!";
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                int res = cmd.ExecuteNonQuery();
+                if (res >= 1)
+                {
+                    MessageBox.Show("Cliente Registrado!!!");
+                }
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.Message.ToString());
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            //cargarEmpleados(dataGridView1);*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -114,6 +141,65 @@ namespace MantenimientoEmpleados
             {
                 conexion.Close();
             }
+        }
+
+        public void cargarEmpleados()
+        { 
+            string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
+            SqlConnection conexion = new SqlConnection(con);
+
+            conexion.Open();
+            SqlDataAdapter da = new SqlDataAdapter("select *from empleado",conexion);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "empleado");
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "empleado";
+            conexion.Close();
+
+
+
+             /*
+
+           
+             try
+             {
+                 conexion.Open();
+
+                 label1.Text = "Conexion exitosa!";
+                 SqlCommand cmd = new SqlCommand(sql, conexion);
+                 int res = cmd.ExecuteNonQuery();
+                 if (res >= 1)
+                 {
+                     MessageBox.Show("Cliente Registrado!!!");
+                 }
+             }
+             catch (Exception x)
+             {
+
+                 MessageBox.Show(x.Message.ToString());
+             }
+             finally
+             {
+                 conexion.Close();
+             }
+
+
+             try
+             {
+                 da = new SqlDataAdapter("select *from empleado",con);
+                 dt = new DataTable();
+                 da.Fill(dt);
+                 dgv.DataSource = dt;
+
+             }
+             catch (Exception ex)
+             {
+                
+                 MessageBox.Show("no se pudiero cargar los datos"+ex.ToString());
+             }
+        
+         */
+        
         }
 
         private void button3_Click(object sender, EventArgs e)
