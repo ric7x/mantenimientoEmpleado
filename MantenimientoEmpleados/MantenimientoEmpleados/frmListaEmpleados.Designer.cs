@@ -36,6 +36,7 @@
             this.rbApellido = new System.Windows.Forms.RadioButton();
             this.rbCedula = new System.Windows.Forms.RadioButton();
             this.btnVerTodos = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1072, 371);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // button1
@@ -123,11 +125,21 @@
             this.btnVerTodos.UseVisualStyleBackColor = true;
             this.btnVerTodos.Click += new System.EventHandler(this.btnVerTodos_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(738, 507);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(160, 62);
+            this.btnImprimir.TabIndex = 8;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
             // frmListaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 576);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnVerTodos);
             this.Controls.Add(this.rbCedula);
             this.Controls.Add(this.rbApellido);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.RadioButton rbApellido;
         private System.Windows.Forms.RadioButton rbCedula;
         private System.Windows.Forms.Button btnVerTodos;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

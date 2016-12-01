@@ -102,6 +102,7 @@ namespace MantenimientoEmpleados
 
         public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
             nombre = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
             apellido = dataGridView1.Rows[e.RowIndex].Cells["apellido"].Value.ToString();
@@ -128,13 +129,44 @@ namespace MantenimientoEmpleados
             
             hd.habilitar(f1);
             f1.btnCrear.Enabled = false;
-            f1.txtId.Enabled = false;
+            f1.txtId.Enabled = false;*/
             
         }
 
         private void btnVerTodos_Click(object sender, EventArgs e)
         {
             cargarEmpleados();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            nombre = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            apellido = dataGridView1.Rows[e.RowIndex].Cells["apellido"].Value.ToString();
+            sexo = dataGridView1.Rows[e.RowIndex].Cells["sexo"].Value.ToString();
+            fechaNacimiento = dataGridView1.Rows[e.RowIndex].Cells["fechaNacimiento"].Value.ToString();
+            fechaIngreso = dataGridView1.Rows[e.RowIndex].Cells["fechaIngreso"].Value.ToString();
+            salario = dataGridView1.Rows[e.RowIndex].Cells["salario"].Value.ToString();
+            estatus = dataGridView1.Rows[e.RowIndex].Cells["estatus"].Value.ToString();
+            cedula = dataGridView1.Rows[e.RowIndex].Cells["cedula"].Value.ToString();
+
+            Form1 f1 = new Form1();
+
+            f1.txtNombre.Text = nombre;
+            f1.txtApellido.Text = apellido;
+            f1.txtEstatus.Text = estatus;
+            f1.dtFechaNacimiento.Text = fechaNacimiento;
+            f1.cmbSexo.Text = sexo;
+            f1.txtSalario.Text = salario;
+            f1.mtCedula.Text = cedula;
+            f1.txtId.Text = id;
+
+            f1.Show();
+            habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
+
+            hd.habilitar(f1);
+            f1.btnCrear.Enabled = false;
+            f1.txtId.Enabled = false;
         }
     }
 }
