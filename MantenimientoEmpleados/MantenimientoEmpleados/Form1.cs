@@ -87,8 +87,13 @@ namespace MantenimientoEmpleados
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+
+            if (txtNombre.TextLength<=0)
+            {
+                MessageBox.Show("hay campos que no contienen datos");
+            }
             
-            
+            else{
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
             string sql = " INSERT INTO empleado (nombre ,apellido ,sexo , cedula, fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + mtCedula.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
@@ -115,6 +120,8 @@ namespace MantenimientoEmpleados
             {
                 conexion.Close();
             }
+
+        }
         }
 
        
@@ -137,12 +144,18 @@ namespace MantenimientoEmpleados
         {
             habilitarYDeshabilitar dh = new habilitarYDeshabilitar();
             dh.habilitar(this);
+            txtId.Enabled = false;
         }
 
         private void btnActualiza_Click(object sender, EventArgs e)
         {
-            int ids;
 
+            if (txtNombre.TextLength <= 0)
+            {
+                MessageBox.Show("tiene que seleccionar un empleado de la lista de empleados");
+            }
+            else { 
+            int ids;
             ids =Convert.ToInt32( txtId.Text);
             
 
@@ -171,7 +184,7 @@ namespace MantenimientoEmpleados
 
                 conexion.Close();
             }
-           
+            }
         }
     }
 }
