@@ -32,6 +32,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.rbApellido = new System.Windows.Forms.RadioButton();
+            this.rbCedula = new System.Windows.Forms.RadioButton();
+            this.btnVerTodos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,12 +67,12 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 87);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
+            this.textBox1.Size = new System.Drawing.Size(406, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(197, 87);
+            this.button2.Location = new System.Drawing.Point(424, 87);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -76,11 +80,58 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // rbNombre
+            // 
+            this.rbNombre.AutoSize = true;
+            this.rbNombre.Location = new System.Drawing.Point(13, 55);
+            this.rbNombre.Name = "rbNombre";
+            this.rbNombre.Size = new System.Drawing.Size(62, 17);
+            this.rbNombre.TabIndex = 4;
+            this.rbNombre.TabStop = true;
+            this.rbNombre.Text = "Nombre";
+            this.rbNombre.UseVisualStyleBackColor = true;
+            // 
+            // rbApellido
+            // 
+            this.rbApellido.AutoSize = true;
+            this.rbApellido.Location = new System.Drawing.Point(104, 55);
+            this.rbApellido.Name = "rbApellido";
+            this.rbApellido.Size = new System.Drawing.Size(62, 17);
+            this.rbApellido.TabIndex = 5;
+            this.rbApellido.TabStop = true;
+            this.rbApellido.Text = "Apellido";
+            this.rbApellido.UseVisualStyleBackColor = true;
+            // 
+            // rbCedula
+            // 
+            this.rbCedula.AutoSize = true;
+            this.rbCedula.Location = new System.Drawing.Point(209, 55);
+            this.rbCedula.Name = "rbCedula";
+            this.rbCedula.Size = new System.Drawing.Size(58, 17);
+            this.rbCedula.TabIndex = 6;
+            this.rbCedula.TabStop = true;
+            this.rbCedula.Text = "Cedula";
+            this.rbCedula.UseVisualStyleBackColor = true;
+            // 
+            // btnVerTodos
+            // 
+            this.btnVerTodos.Location = new System.Drawing.Point(515, 87);
+            this.btnVerTodos.Name = "btnVerTodos";
+            this.btnVerTodos.Size = new System.Drawing.Size(75, 23);
+            this.btnVerTodos.TabIndex = 7;
+            this.btnVerTodos.Text = "ver todos";
+            this.btnVerTodos.UseVisualStyleBackColor = true;
+            this.btnVerTodos.Click += new System.EventHandler(this.btnVerTodos_Click);
+            // 
             // frmListaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 576);
+            this.Controls.Add(this.btnVerTodos);
+            this.Controls.Add(this.rbCedula);
+            this.Controls.Add(this.rbApellido);
+            this.Controls.Add(this.rbNombre);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -101,5 +152,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton rbNombre;
+        private System.Windows.Forms.RadioButton rbApellido;
+        private System.Windows.Forms.RadioButton rbCedula;
+        private System.Windows.Forms.Button btnVerTodos;
     }
 }
