@@ -21,7 +21,8 @@ namespace MantenimientoEmpleados
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
+            hd.deshabilitar(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace MantenimientoEmpleados
             
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
-            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo ,fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
+            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo , cedula, fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + mtCedula.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
             
 
             try
@@ -130,6 +131,47 @@ namespace MantenimientoEmpleados
         private void dtFechaNacimiento_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            habilitarYDeshabilitar dh = new habilitarYDeshabilitar();
+            dh.habilitar(this);
+        }
+
+        private void btnActualiza_Click(object sender, EventArgs e)
+        {
+            int ids;
+
+            ids =Convert.ToInt32( txtId.Text);
+            
+
+            string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
+            SqlConnection conexion = new SqlConnection(con);
+            string sql = "UPDATE empleado SET nombre='" + txtNombre.Text + "',apellido='" + txtApellido.Text + "', sexo='" + cmbSexo.Text + "' , fechaNacimiento='" + dtFechaNacimiento.Value.Date + "' , fechaIngreso='" + dtFechaIngreso.Value.Date + "', cedula='" + mtCedula.Text + "' where id=" + ids + "";
+
+            
+            try
+            {
+                conexion.Open();            
+                SqlCommand cmd = new SqlCommand(sql, conexion);
+                int res = cmd.ExecuteNonQuery();
+                if (res >= 1)
+                {
+                    MessageBox.Show("datos actualizados!!!");
+                }
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.Message.ToString());
+            }
+            finally
+            {
+
+                conexion.Close();
+            }
+           
         }
     }
 }

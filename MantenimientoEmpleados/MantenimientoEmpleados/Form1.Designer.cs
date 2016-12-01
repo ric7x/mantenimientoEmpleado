@@ -54,6 +54,13 @@
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.dtFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.btnActualiza = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.mtCedula = new System.Windows.Forms.MaskedTextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 61);
+            this.label1.Location = new System.Drawing.Point(46, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -71,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 88);
+            this.label2.Location = new System.Drawing.Point(46, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
@@ -80,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 143);
+            this.label3.Location = new System.Drawing.Point(46, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 3;
@@ -89,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 113);
+            this.label4.Location = new System.Drawing.Point(46, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 2;
@@ -98,7 +105,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 169);
+            this.label6.Location = new System.Drawing.Point(46, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 4;
@@ -106,14 +113,14 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(185, 57);
+            this.txtNombre.Location = new System.Drawing.Point(185, 129);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(146, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(185, 84);
+            this.txtApellido.Location = new System.Drawing.Point(185, 156);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(146, 20);
             this.txtApellido.TabIndex = 8;
@@ -124,7 +131,7 @@
             this.groupBox1.Controls.Add(this.btnEdad);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Location = new System.Drawing.Point(34, 385);
+            this.groupBox1.Location = new System.Drawing.Point(34, 457);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(438, 121);
             this.groupBox1.TabIndex = 18;
@@ -171,7 +178,7 @@
             // 
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(34, 308);
+            this.groupBox2.Location = new System.Drawing.Point(34, 380);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(438, 71);
             this.groupBox2.TabIndex = 19;
@@ -198,7 +205,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(356, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(356, 129);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 128);
             this.pictureBox1.TabIndex = 20;
@@ -206,7 +213,7 @@
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(185, 217);
+            this.txtSalario.Location = new System.Drawing.Point(185, 318);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(146, 20);
             this.txtSalario.TabIndex = 22;
@@ -214,7 +221,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(46, 221);
+            this.label7.Location = new System.Drawing.Point(46, 322);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 21;
@@ -222,7 +229,7 @@
             // 
             // txtEstatus
             // 
-            this.txtEstatus.Location = new System.Drawing.Point(185, 191);
+            this.txtEstatus.Location = new System.Drawing.Point(185, 292);
             this.txtEstatus.Name = "txtEstatus";
             this.txtEstatus.Size = new System.Drawing.Size(146, 20);
             this.txtEstatus.TabIndex = 24;
@@ -230,7 +237,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 195);
+            this.label8.Location = new System.Drawing.Point(46, 296);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 23;
@@ -238,7 +245,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(359, 521);
+            this.button1.Location = new System.Drawing.Point(359, 591);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 25;
@@ -249,14 +256,14 @@
             // lblConexion
             // 
             this.lblConexion.AutoSize = true;
-            this.lblConexion.Location = new System.Drawing.Point(253, 526);
+            this.lblConexion.Location = new System.Drawing.Point(253, 596);
             this.lblConexion.Name = "lblConexion";
             this.lblConexion.Size = new System.Drawing.Size(0, 13);
             this.lblConexion.TabIndex = 26;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(185, 257);
+            this.button2.Location = new System.Drawing.Point(185, 358);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 27;
@@ -266,7 +273,8 @@
             // 
             // dtFechaNacimiento
             // 
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(185, 137);
+            this.dtFechaNacimiento.CustomFormat = "dd/mm/yyyy";
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(185, 238);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(146, 20);
             this.dtFechaNacimiento.TabIndex = 28;
@@ -275,7 +283,7 @@
             // 
             // dtFechaIngreso
             // 
-            this.dtFechaIngreso.Location = new System.Drawing.Point(185, 165);
+            this.dtFechaIngreso.Location = new System.Drawing.Point(185, 266);
             this.dtFechaIngreso.Name = "dtFechaIngreso";
             this.dtFechaIngreso.Size = new System.Drawing.Size(146, 20);
             this.dtFechaIngreso.TabIndex = 29;
@@ -287,16 +295,85 @@
             this.cmbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbSexo.Location = new System.Drawing.Point(185, 111);
+            this.cmbSexo.Location = new System.Drawing.Point(185, 183);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(146, 21);
             this.cmbSexo.TabIndex = 30;
+            // 
+            // btnActualiza
+            // 
+            this.btnActualiza.Location = new System.Drawing.Point(200, 12);
+            this.btnActualiza.Name = "btnActualiza";
+            this.btnActualiza.Size = new System.Drawing.Size(115, 67);
+            this.btnActualiza.TabIndex = 31;
+            this.btnActualiza.Text = "Actualizar";
+            this.btnActualiza.UseVisualStyleBackColor = true;
+            this.btnActualiza.Click += new System.EventHandler(this.btnActualiza_Click);
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Location = new System.Drawing.Point(89, 12);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(105, 67);
+            this.btnCrear.TabIndex = 32;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(321, 12);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(105, 67);
+            this.btnEliminar.TabIndex = 33;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(46, 216);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Cedula";
+            // 
+            // mtCedula
+            // 
+            this.mtCedula.Location = new System.Drawing.Point(185, 211);
+            this.mtCedula.Mask = "000-0000000-0";
+            this.mtCedula.Name = "mtCedula";
+            this.mtCedula.Size = new System.Drawing.Size(146, 20);
+            this.mtCedula.TabIndex = 35;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(185, 103);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(30, 20);
+            this.txtId.TabIndex = 37;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(46, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Id:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 571);
+            this.ClientSize = new System.Drawing.Size(508, 632);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.mtCedula);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnCrear);
+            this.Controls.Add(this.btnActualiza);
             this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.dtFechaIngreso);
             this.Controls.Add(this.dtFechaNacimiento);
@@ -338,8 +415,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAntiguedad;
         private System.Windows.Forms.Button btnEdad;
@@ -349,16 +424,25 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtEstatus;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblConexion;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dtFechaNacimiento;
-        private System.Windows.Forms.DateTimePicker dtFechaIngreso;
-        private System.Windows.Forms.ComboBox cmbSexo;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.DateTimePicker dtFechaNacimiento;
+        public System.Windows.Forms.TextBox txtApellido;
+        public System.Windows.Forms.TextBox txtSalario;
+        public System.Windows.Forms.TextBox txtEstatus;
+        public System.Windows.Forms.DateTimePicker dtFechaIngreso;
+        public System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.MaskedTextBox mtCedula;
+        public System.Windows.Forms.Button btnActualiza;
+        public System.Windows.Forms.Button btnCrear;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label10;
     }
 }
 
