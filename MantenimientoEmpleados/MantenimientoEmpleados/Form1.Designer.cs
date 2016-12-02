@@ -277,6 +277,7 @@
             // dtFechaNacimiento
             // 
             this.dtFechaNacimiento.CustomFormat = "dd/mm/yyyy";
+            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaNacimiento.Location = new System.Drawing.Point(185, 284);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(146, 20);
@@ -286,6 +287,7 @@
             // 
             // dtFechaIngreso
             // 
+            this.dtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaIngreso.Location = new System.Drawing.Point(185, 312);
             this.dtFechaIngreso.Name = "dtFechaIngreso";
             this.dtFechaIngreso.Size = new System.Drawing.Size(146, 20);
@@ -331,6 +333,7 @@
             this.btnEliminar.TabIndex = 33;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label9
             // 

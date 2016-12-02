@@ -23,6 +23,7 @@ namespace MantenimientoEmpleados
         {
             habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
             hd.deshabilitar(this);
+            mtCedula.Enabled = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -145,6 +146,7 @@ namespace MantenimientoEmpleados
             habilitarYDeshabilitar dh = new habilitarYDeshabilitar();
             dh.habilitar(this);
             txtId.Enabled = false;
+            mtCedula.Enabled = true;
         }
 
         private void btnActualiza_Click(object sender, EventArgs e)
@@ -184,6 +186,46 @@ namespace MantenimientoEmpleados
 
                 conexion.Close();
             }
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.TextLength <= 0)
+            {
+                MessageBox.Show("tiene que seleccionar un empleado de la lista de empleados");
+            }
+            else
+            {
+                int ids;
+                ids = Convert.ToInt32(txtId.Text);
+
+
+                string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
+                SqlConnection conexion = new SqlConnection(con);
+                string sql = "DELETE FROM empleado WHERE id =" + ids;
+
+
+                try
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand(sql, conexion);
+                    int res = cmd.ExecuteNonQuery();
+                    if (res >= 1)
+                    {
+                        MessageBox.Show("empleado eliminado con exito!!!");
+                    }
+                }
+                catch (Exception x)
+                {
+
+                    MessageBox.Show(x.Message.ToString());
+                }
+                finally
+                {
+
+                    conexion.Close();
+                }
             }
         }
     }
