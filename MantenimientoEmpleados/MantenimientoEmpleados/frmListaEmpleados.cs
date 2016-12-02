@@ -168,5 +168,11 @@ namespace MantenimientoEmpleados
             f1.btnCrear.Enabled = false;
             f1.txtId.Enabled = false;
         }
+
+        private void btnImprime_Click(object sender, EventArgs e)
+        {
+            frmReporte fr = new frmReporte();
+            fr.Show(this);
+        }
     }
 }
