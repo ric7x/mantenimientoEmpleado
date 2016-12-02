@@ -81,7 +81,7 @@ namespace MantenimientoEmpleados
                 dataGridView1.DataMember = "empleado";
                 conexion.Close();
             }
-            else if (rbApellido.Checked == true)
+            else if (rbCedula.Checked == true)
             {
                 SqlDataAdapter da = new SqlDataAdapter("select *from empleado where cedula='" + textBox1.Text + "'", conexion);
                 DataSet ds = new DataSet();
