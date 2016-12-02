@@ -36,7 +36,6 @@
             this.rbApellido = new System.Windows.Forms.RadioButton();
             this.rbCedula = new System.Windows.Forms.RadioButton();
             this.btnVerTodos = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnImprime = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(904, 507);
+            this.button1.Location = new System.Drawing.Point(892, 55);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 62);
             this.button1.TabIndex = 1;
@@ -126,20 +125,11 @@
             this.btnVerTodos.UseVisualStyleBackColor = true;
             this.btnVerTodos.Click += new System.EventHandler(this.btnVerTodos_Click);
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(738, 507);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(160, 62);
-            this.btnImprimir.TabIndex = 8;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
             // btnImprime
             // 
-            this.btnImprime.Location = new System.Drawing.Point(624, 85);
+            this.btnImprime.Location = new System.Drawing.Point(731, 55);
             this.btnImprime.Name = "btnImprime";
-            this.btnImprime.Size = new System.Drawing.Size(75, 23);
+            this.btnImprime.Size = new System.Drawing.Size(145, 62);
             this.btnImprime.TabIndex = 9;
             this.btnImprime.Text = "Imprimir";
             this.btnImprime.UseVisualStyleBackColor = true;
@@ -151,7 +141,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 576);
             this.Controls.Add(this.btnImprime);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnVerTodos);
             this.Controls.Add(this.rbCedula);
             this.Controls.Add(this.rbApellido);
@@ -180,7 +169,6 @@
         private System.Windows.Forms.RadioButton rbApellido;
         private System.Windows.Forms.RadioButton rbCedula;
         private System.Windows.Forms.Button btnVerTodos;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnImprime;
     }
 }
