@@ -175,5 +175,11 @@ namespace MantenimientoEmpleados
             frmReporte fr = new frmReporte();
             fr.Show(this);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }
