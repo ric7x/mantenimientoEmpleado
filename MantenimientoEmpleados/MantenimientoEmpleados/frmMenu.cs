@@ -33,5 +33,11 @@ namespace MantenimientoEmpleados
             Form1 f1 = new Form1();
             f1.Show(this);
         }
+
+        private void btnSueldo_Click(object sender, EventArgs e)
+        {
+            frmCalcularSueldo cs = new frmCalcularSueldo();
+            cs.Show(this);
+        }
     }
 }
