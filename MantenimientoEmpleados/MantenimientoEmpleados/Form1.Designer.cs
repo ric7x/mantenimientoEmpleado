@@ -448,7 +448,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblConexion;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.DateTimePicker dtFechaNacimiento;
         public System.Windows.Forms.TextBox txtApellido;
@@ -464,6 +463,7 @@
         public System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Button button2;
     }
 }
 

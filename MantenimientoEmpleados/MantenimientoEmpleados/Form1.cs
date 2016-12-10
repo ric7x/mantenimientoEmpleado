@@ -163,7 +163,7 @@ namespace MantenimientoEmpleados
 
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
-            string sql = "UPDATE empleado SET nombre='" + txtNombre.Text + "',apellido='" + txtApellido.Text + "', sexo='" + cmbSexo.Text + "' , fechaNacimiento='" + dtFechaNacimiento.Value.Date + "' , fechaIngreso='" + dtFechaIngreso.Value.Date + "', cedula='" + mtCedula.Text + "' where id=" + ids + "";
+            string sql = "UPDATE empleado SET nombre='" + txtNombre.Text + "',apellido='" + txtApellido.Text + "',salario='" + txtSalario.Text + "', sexo='" + cmbSexo.Text + "' , fechaNacimiento='" + dtFechaNacimiento.Value.Date + "' , fechaIngreso='" + dtFechaIngreso.Value.Date + "', cedula='" + mtCedula.Text + "' where id=" + ids + "";
 
             
             try
