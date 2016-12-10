@@ -168,6 +168,7 @@ namespace MantenimientoEmpleados
             f1.btnCrear.Enabled = false;
             f1.txtId.Enabled = false;
             f1.mtCedula.Enabled = true;
+            f1.button2.Enabled = false;
         }
 
         private void btnImprime_Click(object sender, EventArgs e)
