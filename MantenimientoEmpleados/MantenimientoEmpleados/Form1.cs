@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace MantenimientoEmpleados
 {
@@ -92,8 +93,23 @@ namespace MantenimientoEmpleados
             }
         }
 
+        private void limpiar()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtSalario.Clear();
+            txtId.Clear();
+            txtEstatus.Clear();
+            txtEdad.Clear();
+            txtAntiguedad.Clear();
+            cmbSexo.Text = "";
+            mtCedula.Text = "";
+            
+        }
+
         private void button2_Click_1(object sender, EventArgs e)
         {
+          
 
             if (txtNombre.TextLength<=0)
             {
@@ -105,6 +121,12 @@ namespace MantenimientoEmpleados
             SqlConnection conexion = new SqlConnection(con);
             string sql = " INSERT INTO empleado (nombre ,apellido ,sexo , cedula, fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + mtCedula.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
             
+                // Stream usado como buffer
+           // System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            // Se guarda la imagen en el buffer
+            //pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            // Se extraen los bytes del buffer para asignarlos como valor para el 
+            // parámetro.
 
             try
             {
@@ -112,6 +134,7 @@ namespace MantenimientoEmpleados
 
                 label1.Text = "Conexion exitosa!";
                 SqlCommand cmd = new SqlCommand(sql, conexion);
+                
                 int res = cmd.ExecuteNonQuery();
                 if (res >= 1)
                 {
@@ -127,7 +150,10 @@ namespace MantenimientoEmpleados
             {
                 conexion.Close();
             }
-
+            limpiar();
+            habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
+            hd.deshabilitar(this);
+            mtCedula.Enabled = false;
         }
         }
 
@@ -153,6 +179,9 @@ namespace MantenimientoEmpleados
             dh.habilitar(this);
             txtId.Enabled = false;
             mtCedula.Enabled = true;
+            btnActualiza.Enabled = false;
+            btnEliminar.Enabled = false;
+            button2.Enabled = true;
         }
 
         private void btnActualiza_Click(object sender, EventArgs e)
@@ -232,6 +261,36 @@ namespace MantenimientoEmpleados
 
                     conexion.Close();
                 }
+                habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
+                limpiar();
+                hd.deshabilitar(this);
+                btnCrear.Enabled = true;
+                btnEliminar.Enabled = false;
+                btnActualiza.Enabled = false;
+                
+            }
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void button3_Click_3(object sender, EventArgs e)
+        {
+            try
+            {
+                this.openFileDialog1.ShowDialog();
+                if(this.openFileDialog1.FileName.Equals("")==false)
+                {
+                    pictureBox1.Load(this.openFileDialog1.FileName);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("no se pudo cargar la imagen");
+                throw;
             }
         }
     }
