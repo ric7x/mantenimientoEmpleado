@@ -120,7 +120,7 @@ namespace MantenimientoEmpleados
             else{
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
-            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo , cedula, fechaNacimiento ,fechaIngreso ,salario ,estatus) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + mtCedula.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "') ";
+            string sql = " INSERT INTO empleado (nombre ,apellido ,sexo , cedula, fechaNacimiento ,fechaIngreso ,salario ,estatus,cargo) VALUES ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + cmbSexo.Text + "','" + mtCedula.Text + "','" + dtFechaNacimiento.Value.Date + "','" + dtFechaIngreso.Value.Date + "','" + txtSalario.Text + "','" + txtEstatus.Text + "','" + txtCargo.Text + "') ";
             
                 // Stream usado como buffer
            // System.IO.MemoryStream ms = new System.IO.MemoryStream();
@@ -204,7 +204,7 @@ namespace MantenimientoEmpleados
 
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
-            string sql = "UPDATE empleado SET nombre='" + txtNombre.Text + "',apellido='" + txtApellido.Text + "',salario='" + txtSalario.Text + "', sexo='" + cmbSexo.Text + "' , fechaNacimiento='" + dtFechaNacimiento.Value.Date + "' , fechaIngreso='" + dtFechaIngreso.Value.Date + "', cedula='" + mtCedula.Text + "' where id=" + ids + "";
+            string sql = "UPDATE empleado SET nombre='" + txtNombre.Text + "',apellido='" + txtApellido.Text + "',cargo='" + txtCargo.Text + "',salario='" + txtSalario.Text + "', sexo='" + cmbSexo.Text + "' , fechaNacimiento='" + dtFechaNacimiento.Value.Date + "' , fechaIngreso='" + dtFechaIngreso.Value.Date + "', cedula='" + mtCedula.Text + "' where id=" + ids + "";
 
             
             try

@@ -28,6 +28,7 @@ namespace MantenimientoEmpleados
         public string salario;
         public string fechaIngreso;
         public string cedula;
+        public string cargo;
 
         private void frmListaEmpleados_Load(object sender, EventArgs e)
         {
@@ -149,6 +150,7 @@ namespace MantenimientoEmpleados
             salario = dataGridView1.Rows[e.RowIndex].Cells["salario"].Value.ToString();
             estatus = dataGridView1.Rows[e.RowIndex].Cells["estatus"].Value.ToString();
             cedula = dataGridView1.Rows[e.RowIndex].Cells["cedula"].Value.ToString();
+            cargo = dataGridView1.Rows[e.RowIndex].Cells["cargo"].Value.ToString();
 
             Form1 f1 = new Form1();
 
@@ -160,6 +162,7 @@ namespace MantenimientoEmpleados
             f1.txtSalario.Text = salario;
             f1.mtCedula.Text = cedula;
             f1.txtId.Text = id;
+            f1.txtCargo.Text = cargo;
 
             f1.Show();
             habilitarYDeshabilitar hd = new habilitarYDeshabilitar();

@@ -34,11 +34,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(927, 708);
+            this.button1.Location = new System.Drawing.Point(879, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 42);
+            this.button1.Size = new System.Drawing.Size(204, 42);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Generar";
+            this.button1.Text = "Generar Reporte";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -48,16 +48,16 @@
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.CachedPageNumberPerDoc = 10;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 58);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1071, 690);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1071, 493);
             this.crystalReportViewer1.TabIndex = 1;
             // 
             // SueldoEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 762);
+            this.ClientSize = new System.Drawing.Size(1095, 563);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.button1);
             this.Name = "SueldoEmpleados";

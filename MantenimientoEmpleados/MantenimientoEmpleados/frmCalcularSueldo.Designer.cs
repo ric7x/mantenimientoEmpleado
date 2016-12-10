@@ -37,21 +37,27 @@
             // 
             // btnImprime
             // 
-            this.btnImprime.Location = new System.Drawing.Point(893, 28);
+            this.btnImprime.Image = global::MantenimientoEmpleados.Properties.Resources.task;
+            this.btnImprime.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImprime.Location = new System.Drawing.Point(964, 28);
             this.btnImprime.Name = "btnImprime";
-            this.btnImprime.Size = new System.Drawing.Size(145, 62);
+            this.btnImprime.Size = new System.Drawing.Size(152, 62);
             this.btnImprime.TabIndex = 12;
             this.btnImprime.Text = "Generar Reporte";
+            this.btnImprime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImprime.UseVisualStyleBackColor = true;
             this.btnImprime.Click += new System.EventHandler(this.btnImprime_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1054, 28);
+            this.button1.Image = global::MantenimientoEmpleados.Properties.Resources.Close_Window_48;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(1125, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 62);
+            this.button1.Size = new System.Drawing.Size(109, 62);
             this.button1.TabIndex = 11;
             this.button1.Text = "Cerrar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -70,11 +76,14 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(732, 28);
+            this.button2.Image = global::MantenimientoEmpleados.Properties.Resources.printer12;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(855, 28);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 62);
+            this.button2.Size = new System.Drawing.Size(103, 62);
             this.button2.TabIndex = 13;
             this.button2.Text = "Imprimir";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

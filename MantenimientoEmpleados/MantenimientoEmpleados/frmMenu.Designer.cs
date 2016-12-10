@@ -28,11 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnSueldo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnListaEmpl = new System.Windows.Forms.Button();
-            this.btnSueldo = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnSueldo
+            // 
+            this.btnSueldo.Image = global::MantenimientoEmpleados.Properties.Resources.task;
+            this.btnSueldo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSueldo.Location = new System.Drawing.Point(401, 12);
+            this.btnSueldo.Name = "btnSueldo";
+            this.btnSueldo.Size = new System.Drawing.Size(160, 72);
+            this.btnSueldo.TabIndex = 3;
+            this.btnSueldo.Text = "Nomina";
+            this.btnSueldo.UseVisualStyleBackColor = true;
+            this.btnSueldo.Click += new System.EventHandler(this.btnSueldo_Click);
             // 
             // btnSalir
             // 
@@ -69,17 +81,6 @@
             this.btnListaEmpl.Text = "  Listado Empleado";
             this.btnListaEmpl.UseVisualStyleBackColor = true;
             this.btnListaEmpl.Click += new System.EventHandler(this.btnListaEmpl_Click);
-            // 
-            // btnSueldo
-            // 
-            this.btnSueldo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSueldo.Location = new System.Drawing.Point(401, 12);
-            this.btnSueldo.Name = "btnSueldo";
-            this.btnSueldo.Size = new System.Drawing.Size(160, 72);
-            this.btnSueldo.TabIndex = 3;
-            this.btnSueldo.Text = "Calcular Sueldo";
-            this.btnSueldo.UseVisualStyleBackColor = true;
-            this.btnSueldo.Click += new System.EventHandler(this.btnSueldo_Click);
             // 
             // frmMenu
             // 

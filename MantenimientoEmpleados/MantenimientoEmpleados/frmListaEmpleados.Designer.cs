@@ -57,6 +57,8 @@
             // 
             // button1
             // 
+            this.button1.Image = global::MantenimientoEmpleados.Properties.Resources.Close_Window_48;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(892, 55);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 62);
@@ -127,9 +129,11 @@
             // 
             // btnImprime
             // 
+            this.btnImprime.Image = global::MantenimientoEmpleados.Properties.Resources.printer12;
+            this.btnImprime.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprime.Location = new System.Drawing.Point(731, 55);
             this.btnImprime.Name = "btnImprime";
-            this.btnImprime.Size = new System.Drawing.Size(145, 62);
+            this.btnImprime.Size = new System.Drawing.Size(138, 62);
             this.btnImprime.TabIndex = 9;
             this.btnImprime.Text = "Imprimir";
             this.btnImprime.UseVisualStyleBackColor = true;
