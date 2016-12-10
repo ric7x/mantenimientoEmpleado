@@ -43,5 +43,10 @@ namespace MantenimientoEmpleados
             SueldoEmpleados se = new SueldoEmpleados();
             se.Show(this);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
