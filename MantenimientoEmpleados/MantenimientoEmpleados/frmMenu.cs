@@ -32,6 +32,10 @@ namespace MantenimientoEmpleados
         {
             Form1 f1 = new Form1();
             f1.Show(this);
+            f1.btnEliminar.Enabled = false;
+            f1.btnActualiza.Enabled = false;
+            f1.button2.Enabled = false;
+
         }
 
         private void btnSueldo_Click(object sender, EventArgs e)
