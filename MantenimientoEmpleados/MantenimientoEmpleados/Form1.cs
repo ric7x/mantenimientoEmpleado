@@ -43,12 +43,18 @@ namespace MantenimientoEmpleados
 
         private void btnAntiguedad_Click(object sender, EventArgs e)
         {
-
+            DateTime fa = DateTime.Now;
+            DateTime fn = new DateTime();
+            fn = dtFechaIngreso.Value;
+            txtAntiguedad.Text = (fa.Year - fn.Year).ToString();
         }
 
         private void btnEdad_Click(object sender, EventArgs e)
         {
-
+            DateTime fa = DateTime.Now;
+            DateTime fn = new DateTime();
+            fn=dtFechaNacimiento.Value;
+            txtEdad.Text = (fa.Year - fn.Year).ToString();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)

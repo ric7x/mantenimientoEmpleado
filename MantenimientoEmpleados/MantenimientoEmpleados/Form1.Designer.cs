@@ -39,11 +39,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAntiguedad = new System.Windows.Forms.Button();
             this.btnEdad = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtAntiguedad = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,8 +60,9 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -130,11 +128,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnAntiguedad);
             this.groupBox1.Controls.Add(this.btnEdad);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Location = new System.Drawing.Point(34, 503);
+            this.groupBox1.Controls.Add(this.txtAntiguedad);
+            this.groupBox1.Controls.Add(this.txtEdad);
+            this.groupBox1.Location = new System.Drawing.Point(49, 439);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(438, 121);
             this.groupBox1.TabIndex = 18;
@@ -161,50 +161,21 @@
             this.btnEdad.UseVisualStyleBackColor = true;
             this.btnEdad.Click += new System.EventHandler(this.btnEdad_Click);
             // 
-            // textBox8
+            // txtAntiguedad
             // 
-            this.textBox8.Location = new System.Drawing.Point(151, 58);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 20;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txtAntiguedad.Location = new System.Drawing.Point(151, 58);
+            this.txtAntiguedad.Name = "txtAntiguedad";
+            this.txtAntiguedad.Size = new System.Drawing.Size(100, 20);
+            this.txtAntiguedad.TabIndex = 20;
+            this.txtAntiguedad.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox7
+            // txtEdad
             // 
-            this.textBox7.Location = new System.Drawing.Point(151, 32);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 19;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(34, 426);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(438, 71);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Salario";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(151, 27);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(92, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Salario";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.txtEdad.Location = new System.Drawing.Point(151, 32);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(100, 20);
+            this.txtEdad.TabIndex = 19;
+            this.txtEdad.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // pictureBox1
             // 
@@ -248,7 +219,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(359, 637);
+            this.button1.Location = new System.Drawing.Point(374, 573);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 25;
@@ -259,7 +230,7 @@
             // lblConexion
             // 
             this.lblConexion.AutoSize = true;
-            this.lblConexion.Location = new System.Drawing.Point(253, 642);
+            this.lblConexion.Location = new System.Drawing.Point(268, 578);
             this.lblConexion.Name = "lblConexion";
             this.lblConexion.Size = new System.Drawing.Size(0, 13);
             this.lblConexion.TabIndex = 26;
@@ -379,6 +350,24 @@
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(109, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Años";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(109, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 13);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Años";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,7 +392,6 @@
             this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -419,8 +407,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -438,11 +424,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAntiguedad;
         private System.Windows.Forms.Button btnEdad;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAntiguedad;
+        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -464,6 +447,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label5;
     }
 }
 
