@@ -22,6 +22,7 @@ namespace MantenimientoEmpleados
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
             hd.deshabilitar(this);
             mtCedula.Enabled = false;
@@ -154,6 +155,8 @@ namespace MantenimientoEmpleados
             habilitarYDeshabilitar hd = new habilitarYDeshabilitar();
             hd.deshabilitar(this);
             mtCedula.Enabled = false;
+            button2.Enabled = false;
+            btnCrear.Enabled = true;
         }
         }
 
@@ -175,6 +178,7 @@ namespace MantenimientoEmpleados
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            
             habilitarYDeshabilitar dh = new habilitarYDeshabilitar();
             dh.habilitar(this);
             txtId.Enabled = false;
@@ -182,6 +186,8 @@ namespace MantenimientoEmpleados
             btnActualiza.Enabled = false;
             btnEliminar.Enabled = false;
             button2.Enabled = true;
+            txtNombre.Focus();
+            btnCrear.Enabled = false;
         }
 
         private void btnActualiza_Click(object sender, EventArgs e)

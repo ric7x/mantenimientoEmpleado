@@ -119,14 +119,14 @@
             this.txtNombre.Location = new System.Drawing.Point(185, 175);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(146, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(185, 202);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(146, 20);
-            this.txtApellido.TabIndex = 8;
+            this.txtApellido.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -210,7 +210,7 @@
             this.txtSalario.Location = new System.Drawing.Point(185, 364);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(146, 20);
-            this.txtSalario.TabIndex = 22;
+            this.txtSalario.TabIndex = 8;
             // 
             // label7
             // 
@@ -226,7 +226,7 @@
             this.txtEstatus.Location = new System.Drawing.Point(185, 338);
             this.txtEstatus.Name = "txtEstatus";
             this.txtEstatus.Size = new System.Drawing.Size(146, 20);
-            this.txtEstatus.TabIndex = 24;
+            this.txtEstatus.TabIndex = 7;
             // 
             // label8
             // 
@@ -257,10 +257,12 @@
             // 
             // button2
             // 
+            this.button2.Image = global::MantenimientoEmpleados.Properties.Resources.save;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(171, 58);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 67);
-            this.button2.TabIndex = 27;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -272,7 +274,7 @@
             this.dtFechaNacimiento.Location = new System.Drawing.Point(185, 284);
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(146, 20);
-            this.dtFechaNacimiento.TabIndex = 28;
+            this.dtFechaNacimiento.TabIndex = 5;
             this.dtFechaNacimiento.Value = new System.DateTime(2016, 11, 21, 0, 0, 0, 0);
             this.dtFechaNacimiento.ValueChanged += new System.EventHandler(this.dtFechaNacimiento_ValueChanged);
             // 
@@ -282,7 +284,7 @@
             this.dtFechaIngreso.Location = new System.Drawing.Point(185, 312);
             this.dtFechaIngreso.Name = "dtFechaIngreso";
             this.dtFechaIngreso.Size = new System.Drawing.Size(146, 20);
-            this.dtFechaIngreso.TabIndex = 29;
+            this.dtFechaIngreso.TabIndex = 6;
             this.dtFechaIngreso.Value = new System.DateTime(2016, 11, 21, 0, 0, 0, 0);
             // 
             // cmbSexo
@@ -294,10 +296,12 @@
             this.cmbSexo.Location = new System.Drawing.Point(185, 229);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(146, 21);
-            this.cmbSexo.TabIndex = 30;
+            this.cmbSexo.TabIndex = 3;
             // 
             // btnActualiza
             // 
+            this.btnActualiza.Image = global::MantenimientoEmpleados.Properties.Resources.agt_update_misc;
+            this.btnActualiza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnActualiza.Location = new System.Drawing.Point(301, 58);
             this.btnActualiza.Name = "btnActualiza";
             this.btnActualiza.Size = new System.Drawing.Size(115, 67);
@@ -308,6 +312,8 @@
             // 
             // btnCrear
             // 
+            this.btnCrear.Image = global::MantenimientoEmpleados.Properties.Resources.create;
+            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrear.Location = new System.Drawing.Point(60, 58);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(105, 67);
@@ -318,6 +324,8 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Image = global::MantenimientoEmpleados.Properties.Resources.erase;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(422, 58);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 67);
@@ -341,7 +349,7 @@
             this.mtCedula.Mask = "000-0000000-0";
             this.mtCedula.Name = "mtCedula";
             this.mtCedula.Size = new System.Drawing.Size(146, 20);
-            this.mtCedula.TabIndex = 35;
+            this.mtCedula.TabIndex = 4;
             // 
             // txtId
             // 
@@ -379,7 +387,7 @@
             this.button3.Location = new System.Drawing.Point(408, 309);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 23);
-            this.button3.TabIndex = 39;
+            this.button3.TabIndex = 9;
             this.button3.Text = "Examinar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_3);
@@ -388,7 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 700);
+            this.ClientSize = new System.Drawing.Size(570, 559);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtId);
