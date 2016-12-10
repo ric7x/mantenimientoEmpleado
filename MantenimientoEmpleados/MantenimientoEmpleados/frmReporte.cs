@@ -31,5 +31,13 @@ namespace MantenimientoEmpleados
             crystalReportViewer1.Refresh();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReportDocument crysta1rpt = new ReportDocument();
+            crysta1rpt.Load(@"C:\Users\TheHangover\Source\Repos\NewRepo\MantenimientoEmpleados\MantenimientoEmpleados\CrystalReport1.rpt");
+            crystalReportViewer1.ReportSource = crysta1rpt;
+            crystalReportViewer1.Refresh();
+        }
     }
 }
