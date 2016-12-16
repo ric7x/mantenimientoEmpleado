@@ -24,13 +24,13 @@ namespace MantenimientoEmpleados
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
 
-            conexion.Open();
+           
             SqlDataAdapter da = new SqlDataAdapter("select id,nombre, cedula,cargo, salario, salario*0.12 as LSR,salario*0.04 as SS,salario*0.02 as OTROS,(salario*0.12 + salario*0.04 + salario*0.02) as TotalDescuento,	salario - (salario*0.12 + salario*0.04 + salario*0.02) as SueltoNeto from empleado order by nombre asc", conexion);
             DataSet ds = new DataSet();
             da.Fill(ds, "empleado");
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "empleado"; 
-            conexion.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

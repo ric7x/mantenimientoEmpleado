@@ -25,13 +25,13 @@ namespace MantenimientoEmpleados
             SqlConnection conexion = new SqlConnection(con);
            // DataSet ds = new DataSet();
             DataTable dt = new DataTable();
-            conexion.Open();
+            
             SqlDataAdapter da = new SqlDataAdapter("select dbo.empleado.nombre, dbo.empleado.Cargo,dbo.detallesNominas.salario,  dbo.detallesNominas.salario*0.12 as LSR,dbo.detallesNominas.salario*0.04 as SS,dbo.detallesNominas.salario*0.02 as OTROS,(dbo.detallesNominas.salario*0.12 + dbo.detallesNominas.salario*0.04 + dbo.detallesNominas.salario*0.02) as TotalDescuento,	dbo.detallesNominas.salario - (dbo.detallesNominas.salario*0.12 + dbo.detallesNominas.salario*0.04 + dbo.detallesNominas.salario*0.02) as SueltoNeto from dbo.detallesNominas INNER JOIN                         dbo.empleado ON dbo.detallesNominas.idEmpleado = dbo.empleado.id where fechaIni='" + dtp1.Value.Date + "' and fechaFin<= '" + dtp2.Value.Date + "' ", conexion);
            // SqlDataAdapter da = new SqlDataAdapter("select idEmpleado,salario, salario*0.12 as LSR,salario*0.04 as SS,salario*0.02 as OTROS,(salario*0.12 + salario*0.04 + salario*0.02) as TotalDescuento,	salario - (salario*0.12 + salario*0.04 + salario*0.02) as SueltoNeto from detallesNominas where fechaIni='" + dtp1.Value.Date + "' and fechaFin<= '" + dtp2.Value.Date + "' ", conexion);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             //dataGridView1.DataMember = "detallesNominas";
-            conexion.Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -63,7 +63,7 @@ namespace MantenimientoEmpleados
             { 
             string con = ConfigurationManager.ConnectionStrings["cnx"].ToString();
             SqlConnection conexion = new SqlConnection(con);
-            conexion.Open();
+            
             if (rbNombre.Checked==true)
             {
                 SqlDataAdapter da = new SqlDataAdapter("select *from empleado where nombre='" + textBox1.Text + "'", conexion);
@@ -71,7 +71,7 @@ namespace MantenimientoEmpleados
                 da.Fill(ds, "empleado");
                 dataGridView1.DataSource = ds;
                 dataGridView1.DataMember = "empleado";
-                conexion.Close();
+                
             }
             else if (rbApellido.Checked==true)
             {
@@ -80,7 +80,7 @@ namespace MantenimientoEmpleados
                 da.Fill(ds, "empleado");
                 dataGridView1.DataSource = ds;
                 dataGridView1.DataMember = "empleado";
-                conexion.Close();
+                
             }
             else if (rbCedula.Checked == true)
             {
@@ -89,7 +89,7 @@ namespace MantenimientoEmpleados
                 da.Fill(ds, "empleado");
                 dataGridView1.DataSource = ds;
                 dataGridView1.DataMember = "empleado";
-                conexion.Close();
+                
             }
 
             }
