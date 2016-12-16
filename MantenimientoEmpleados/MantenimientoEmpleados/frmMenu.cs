@@ -46,8 +46,8 @@ namespace MantenimientoEmpleados
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmBuscarNomina frmbuscar = new frmBuscarNomina();
-            frmbuscar.Show(this);
+            frmBuscarNomina bn = new frmBuscarNomina();
+            bn.Show(this);
         }
     }
 }

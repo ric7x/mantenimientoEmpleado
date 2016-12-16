@@ -43,5 +43,10 @@ namespace MantenimientoEmpleados
         {
             this.Close();
         }
+
+        private void frmBuscarNomina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
