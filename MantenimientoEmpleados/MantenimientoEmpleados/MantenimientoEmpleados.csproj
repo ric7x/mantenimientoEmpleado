@@ -85,6 +85,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarNomina.Designer.cs">
+      <DependentUpon>frmBuscarNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalcularSueldo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarNomina.resx">
+      <DependentUpon>frmBuscarNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalcularSueldo.resx">
       <DependentUpon>frmCalcularSueldo.cs</DependentUpon>

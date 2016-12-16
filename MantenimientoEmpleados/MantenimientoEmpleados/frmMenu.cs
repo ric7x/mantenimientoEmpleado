@@ -43,5 +43,11 @@ namespace MantenimientoEmpleados
             frmCalcularSueldo cs = new frmCalcularSueldo();
             cs.Show(this);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmBuscarNomina frmbuscar = new frmBuscarNomina();
+            frmbuscar.Show(this);
+        }
     }
 }
