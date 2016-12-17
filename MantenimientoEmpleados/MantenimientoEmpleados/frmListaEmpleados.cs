@@ -19,16 +19,7 @@ namespace MantenimientoEmpleados
             InitializeComponent();
         }
 
-        public string id;
-        public string nombre;
-        public string apellido;
-        public string sexo;
-        public string fechaNacimiento;
-        public string estatus;
-        public string salario;
-        public string fechaIngreso;
-        public string cedula;
-        public string cargo;
+       
 
         private void frmListaEmpleados_Load(object sender, EventArgs e)
         {
@@ -138,6 +129,16 @@ namespace MantenimientoEmpleados
         {
             cargarEmpleados();
         }
+        public string id;
+        public string nombre;
+        public string apellido;
+        public string sexo;
+        public string fechaNacimiento;
+        public string estatus;
+        public string salario;
+        public string fechaIngreso;
+        public string cedula;
+        public string cargo;
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

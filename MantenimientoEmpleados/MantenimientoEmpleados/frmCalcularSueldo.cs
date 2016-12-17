@@ -80,7 +80,7 @@ namespace MantenimientoEmpleados
                 {
                 conexion.Close();
                 }
-
+                
 
             //string sql = "insert into detallesNominas (salario) values ('11')";
             //SqlCommand cmd = new SqlCommand(sql, conexion);
@@ -89,6 +89,7 @@ namespace MantenimientoEmpleados
             //conexion.Close();
            
         }
+            MessageBox.Show("nomina guardada con exito");
     }
 }
 }
